@@ -1,7 +1,6 @@
 # importting necessary module(s)/libraries
 
 from time import *
-from calendar import *
 
 
 print('\n                      WELCOME TO BLUE ONYX BANK \n    "Where Financial Stability Meets Personal Transformation"')
