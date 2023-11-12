@@ -1,8 +1,8 @@
 # importting necessary module(s)/libraries
 
-from time import *
+from time import *   # I used this library in other to be able to slow the the speed of the program, in other to simulate the loading time of an ATM
 
-
+# Naming of my bank
 print('\n                      WELCOME TO BLUE ONYX BANK \n    "Where Financial Stability Meets Personal Transformation"')
 sleep(3)
 
@@ -23,34 +23,33 @@ Customer3_acct_no = 2233445566
 Customer3_Pin = 23456
 Customer3_acct_bal = 570000
 
+# Trial count
+trial = 2   # I used 2 here instead of 3 before i am already using a trial when i initialize the variable (account number/Pin)
 
-trial = 2
-
-
-acc_no = int(input('Enter your account number: '))
+account_no = int(input('Enter your account number: '))
 sleep(1)
 
 # Account number / Pin Validation
 
-while len(str(acc_no)) != 10:
+while len(str(account_no)) != 10:    # I used str() in other to convert the account number which is a integer to a string so i can get the length
     if trial == 0:
         print('Sorry we could not validate your account number, please try again later\nThanks for banking with us') 
         exit()
     else:
         print("Account number must be 10 digits")
-        acc_no = int(input('Enter your account number: '))
+        account_no = int(input('Enter your account number: '))
         trial -= 1
         sleep(1)
         
-pin = int(input('Enter your pin: '))
+account_pin = int(input('Enter your pin: '))
 
-while len(str(pin)) != 5:
+while len(str(account_pin)) != 5:
     if trial == 0:
         print('Sorry we could not validate your pin, please try again \nThanks for banking with us') 
         exit()
     else:
         print("Pin must be 5 digits")
-        pin = int(input('Enter your pin: '))
+        account_pin = int(input('Enter your pin: '))
         trial -= 1
         sleep(1)
 
@@ -58,17 +57,18 @@ sleep(1)
 print('Please wait......')
 sleep(2)
 
-if acc_no == Customer1_acc_no and pin == Customer1_Pin:
+#  Validating if the account details exist in the bank
+if account_no == Customer1_acc_no and account_pin == Customer1_Pin:
     print('Pin validated......')
     sleep(1)
     print('Welcome',Customer1_name,',Which of the following transaction would you like to perform....')
     sleep(2)
-elif acc_no == Customer2_acc_no and pin == Customer2_Pin:
+elif account_no == Customer2_acc_no and account_pin == Customer2_Pin:
     print('Pin validated......')
     sleep(1)
     print('Welcome',Customer2_name,',Which of the following transaction would you like to perform....')
     sleep(2)
-elif acc_no == Customer3_acct_no and pin == Customer3_Pin:
+elif account_no == Customer3_acct_no and account_pin == Customer3_Pin:
     print('Pin validated......')
     sleep(1)
     print('Welcome',Customer3_name,',Which of the following transaction would you like to perform....')
@@ -92,7 +92,7 @@ sleep(2)
 while True:
     # Balance display
     if int(choice) == 1:
-        if pin == Customer1_Pin:
+        if account_pin == Customer1_Pin:
             print('Your balance is',Customer1_acct_bal, 'NAIRA')
             sleep(1)
             print('Would you like to perform another transaction? \n 1 - Yes   2 - No ')
@@ -110,7 +110,7 @@ while True:
                 sleep(2)
                 exit()   
             
-        elif pin == Customer2_Pin:
+        elif account_pin == Customer2_Pin:
             print('Your balance is',Customer2_acct_bal, 'NAIRA')
             sleep(1)
             print('Would you like to perform another transaction? \n 1 - Yes   2 - No ')
@@ -127,7 +127,7 @@ while True:
                 print('Thank you for banking with us')
                 sleep(2)
                 exit()  
-        elif pin == Customer3_Pin:
+        elif account_pin == Customer3_Pin:
             print('Your balance is',Customer3_acct_bal, 'NAIRA')
             sleep(1)
             print('Would you like to perform another transaction? \n 1 - Yes   2 - No ')
@@ -151,142 +151,232 @@ while True:
             print('Withdrawal menu\n  1 - 1000 Naira   4 - 10000 Naira\n  2 - 2000 Naira   5- 20000 Naira\n  3 - 5000 Naira   6- Cancel transaction')
             withdrawal_choice = input('Choose a withdrawal amount: ') 
             if int(withdrawal_choice) == 1:
-                if pin == Customer1_Pin:
+                if account_pin == Customer1_Pin:
                     if Customer1_acct_bal >= 1000:
                         new_balance_1 = (Customer1_acct_bal - 1000)
                         Customer1_acct_bal = new_balance_1
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_1)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
                         
-                elif pin == Customer2_Pin:
+                elif account_pin == Customer2_Pin:
                     if Customer2_acct_bal >= 1000:
                         new_balance_2 = (Customer2_acct_bal - 1000)
                         Customer2_acct_bal = new_balance_2
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_2)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break 
-                elif pin == Customer3_Pin:
+                elif account_pin == Customer3_Pin:
                     if Customer3_acct_bal >= 1000:
                         new_balance_3 = (Customer3_acct_bal - 1000)
                         Customer2_acct_bal = new_balance_3
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_3)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
             elif int(withdrawal_choice) == 2:
-                if pin == Customer1_Pin:
+                if account_pin == Customer1_Pin:
                     if Customer1_acct_bal >= 2000:
                         new_balance_1 = (Customer1_acct_bal - 2000)
                         Customer1_acct_bal = new_balance_1
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_1)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
-                elif pin == Customer2_Pin:
+                elif account_pin == Customer2_Pin:
                     if Customer2_acct_bal >= 2000:
                         new_balance_2 = (Customer2_acct_bal - 2000)
                         Customer2_acct_bal = new_balance_2
-                        print('Your balance is',new_balance_2) 
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
+                        print('Your balance is',new_balance_2)
+                        sleep(1) 
                     else:
                         print('Insufficient Funds')
                         break
-                elif pin == Customer3_Pin:
+                elif account_pin == Customer3_Pin:
                     if Customer3_acct_bal >= 2000:
                         new_balance_3 = (Customer3_acct_bal - 2000)
                         Customer3_acct_bal = new_balance_3
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_3)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
                     
             elif int(withdrawal_choice) == 3:
-                if pin == Customer1_Pin:
+                if account_pin == Customer1_Pin:
                     if Customer1_acct_bal >= 5000:
                         new_balance_1 = (Customer1_acct_bal - 5000)
                         Customer1_acct_bal = new_balance_1
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_1)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
-                elif pin == Customer2_Pin:
+                elif account_pin == Customer2_Pin:
                     if Customer2_acct_bal >= 5000:
                         new_balance_2 = (Customer2_acct_bal - 5000)
                         Customer2_acct_bal = new_balance_2
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_2)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
                     
-                elif pin == Customer3_Pin:
+                elif account_pin == Customer3_Pin:
                     if Customer3_acct_bal >= 5000:
                         new_balance_3 = (Customer3_acct_bal - 5000)
                         Customer3_acct_bal = new_balance_3
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_3)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
             elif int(withdrawal_choice) == 4:
-                if pin == Customer1_Pin:
+                if account_pin == Customer1_Pin:
                     if Customer1_acct_bal >= 10000:
                         new_balance_1 = (Customer1_acct_bal - 10000)
                         Customer1_acct_bal = new_balance_1
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_1)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
-                elif pin == Customer2_Pin:
+                elif account_pin == Customer2_Pin:
                     if Customer2_acct_bal >= 10000:
                         new_balance_2 = (Customer2_acct_bal - 10000)
                         Customer2_acct_bal = new_balance_2
-                        print('Your balance is',new_balance_2) 
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
+                        print('Your balance is',new_balance_2)
+                        sleep(1) 
                     else:
                         print('Insufficient Funds')
                         break
-                elif pin == Customer3_Pin:
+                elif account_pin == Customer3_Pin:
                     if Customer3_acct_bal >= 10000:
                         new_balance_3 = (Customer3_acct_bal - 10000)
                         Customer3_acct_bal = new_balance_3
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_3)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
                     
             elif int(withdrawal_choice) == 5:
-                if pin == Customer1_Pin:
+                if account_pin == Customer1_Pin:
                     if Customer1_acct_bal >= 20000:
                         new_balance_1 = (Customer1_acct_bal - 20000)
                         Customer1_acct_bal = new_balance_1
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_1)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
-                elif pin == Customer2_Pin:
+                elif account_pin == Customer2_Pin:
                     if Customer2_acct_bal >= 20000:
                         new_balance_2 = (Customer2_acct_bal - 20000)
                         Customer2_acct_bal = new_balance_2
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_2)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break 
-                elif pin == Customer3_Pin:
+                elif account_pin == Customer3_Pin:
                     if Customer3_acct_bal >= 20000:
                         new_balance_3 = (Customer3_acct_bal - 20000)
                         Customer3_acct_bal = new_balance_3
+                        sleep(0.5)
+                        print('Transaction in Progress..... Please wait.....')
+                        sleep(1.5)
+                        print('Withdrawal Successful......')
+                        sleep(0.5)
                         print('Your balance is',new_balance_3)
+                        sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
             else:
                 print('Withdrawal Transaction Cancelled.....')
                 print('No amount deducted')
-                if pin == Customer1_Pin:
+                if account_pin == Customer1_Pin:
                     print('Your balance is',new_balance_1)
-                elif pin == Customer2_Pin:
+                elif account_pin == Customer2_Pin:
                     print('Your balance is',new_balance_2)
-                elif pin == Customer3_Pin:
+                elif account_pin == Customer3_Pin:
                     print('Your balance is',new_balance_3)
                 print('\n Would you like to perform another transaction?\n 1 - Yes   2 - No ')
                 
@@ -337,15 +427,15 @@ while True:
             sleep(2)
             exit()
         elif deposit <= 1000000:
-            if pin == Customer1_Pin:
+            if account_pin == Customer1_Pin:
                 new_balance_deposit_1 = Customer1_acct_bal + deposit
                 print('Your balance is',new_balance_deposit_1)
                 Customer1_acct_bal = new_balance_deposit_1
-            elif pin == Customer2_Pin:
+            elif account_pin == Customer2_Pin:
                 new_balance_deposit_2 = Customer2_acct_bal + deposit
                 print('Your balance is',new_balance_deposit_2)
                 Customer2_acct_bal = new_balance_deposit_2
-            elif pin == Customer3_Pin:
+            elif account_pin == Customer3_Pin:
                 new_balance_deposit_3 = Customer3_acct_bal + deposit
                 print('Your balance is',new_balance_deposit_3)
                 Customer3_acct_bal = new_balance_deposit_3
