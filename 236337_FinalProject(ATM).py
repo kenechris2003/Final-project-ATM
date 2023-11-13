@@ -74,7 +74,7 @@ elif account_no == Customer3_acct_no and account_pin == Customer3_Pin:
     print('Welcome',Customer3_name,',Which of the following transaction would you like to perform....')
     sleep(2)
 else:
-    print('Sorry, account infomation no found')
+    print('Sorry, account infomation no found \n Kindly visit the bank to create an account......\n Thank you for Banking with us... \n We would love to see you again')
     exit()
 
 print("")
@@ -86,6 +86,7 @@ print("")
 print("*" *60)
 sleep(2)
 choice = input('Enter a choice: ')
+print('')
 sleep(2)
 
 
@@ -106,7 +107,7 @@ while True:
                 choice = input('Enter a choice: ')
                 sleep(2)
             else:
-                print('Thank you for banking with us')
+                print('Thank you for banking with us \n We would love to see you again \n BYE!!!! for now')
                 sleep(2)
                 exit()   
             
@@ -124,7 +125,7 @@ while True:
                 choice = input('Enter a choice: ')
                 sleep(2)
             else:
-                print('Thank you for banking with us')
+                print('Thank you for banking with us \n We would love to see you again \n BYE!!!! for now')
                 sleep(2)
                 exit()  
         elif account_pin == Customer3_Pin:
@@ -139,6 +140,7 @@ while True:
                 print("*" *60)
                 sleep(2)
                 choice = input('Enter a choice: ')
+                print('')
                 sleep(2)
             else:
                 print('Thank you for banking with us')
@@ -150,6 +152,7 @@ while True:
         while int(choice) == 2: 
             print('Withdrawal menu\n  1 - 1000 Naira   4 - 10000 Naira\n  2 - 2000 Naira   5- 20000 Naira\n  3 - 5000 Naira   6- Cancel transaction')
             withdrawal_choice = input('Choose a withdrawal amount: ') 
+            print('')
             if int(withdrawal_choice) == 1:
                 if account_pin == Customer1_Pin:
                     if Customer1_acct_bal >= 1000:
@@ -157,10 +160,11 @@ while True:
                         Customer1_acct_bal = new_balance_1
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_1)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -172,10 +176,11 @@ while True:
                         Customer2_acct_bal = new_balance_2
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_2)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -186,10 +191,11 @@ while True:
                         Customer2_acct_bal = new_balance_3
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_3)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -201,10 +207,11 @@ while True:
                         Customer1_acct_bal = new_balance_1
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_1)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -215,10 +222,11 @@ while True:
                         Customer2_acct_bal = new_balance_2
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_2)
+                        print('')
                         sleep(1) 
                     else:
                         print('Insufficient Funds')
@@ -229,10 +237,11 @@ while True:
                         Customer3_acct_bal = new_balance_3
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_3)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -245,10 +254,11 @@ while True:
                         Customer1_acct_bal = new_balance_1
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_1)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -259,10 +269,11 @@ while True:
                         Customer2_acct_bal = new_balance_2
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_2)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -274,10 +285,11 @@ while True:
                         Customer3_acct_bal = new_balance_3
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_3)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -289,10 +301,11 @@ while True:
                         Customer1_acct_bal = new_balance_1
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_1)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -303,10 +316,11 @@ while True:
                         Customer2_acct_bal = new_balance_2
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_2)
+                        print('')
                         sleep(1) 
                     else:
                         print('Insufficient Funds')
@@ -317,10 +331,11 @@ while True:
                         Customer3_acct_bal = new_balance_3
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_3)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -333,10 +348,11 @@ while True:
                         Customer1_acct_bal = new_balance_1
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_1)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -347,10 +363,11 @@ while True:
                         Customer2_acct_bal = new_balance_2
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_2)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
@@ -361,23 +378,28 @@ while True:
                         Customer3_acct_bal = new_balance_3
                         sleep(0.5)
                         print('Transaction in Progress..... Please wait.....')
-                        sleep(1.5)
+                        sleep(3)
                         print('Withdrawal Successful......')
-                        sleep(0.5)
+                        sleep(1)
                         print('Your balance is',new_balance_3)
+                        print('')
                         sleep(1)
                     else:
                         print('Insufficient Funds')
                         break
             else:
+                print('Please wait....')
+                sleep(1)
                 print('Withdrawal Transaction Cancelled.....')
+                sleep(0.5)
                 print('No amount deducted')
+                sleep(1)
                 if account_pin == Customer1_Pin:
-                    print('Your balance is',new_balance_1)
+                    print('Your balance is',Customer1_acct_bal)
                 elif account_pin == Customer2_Pin:
-                    print('Your balance is',new_balance_2)
+                    print('Your balance is',Customer2_acct_bal)
                 elif account_pin == Customer3_Pin:
-                    print('Your balance is',new_balance_3)
+                    print('Your balance is',Customer3_acct_bal)
                 print('\n Would you like to perform another transaction?\n 1 - Yes   2 - No ')
                 
                 choice_3 = input('Enter a choice: ')
@@ -389,11 +411,11 @@ while True:
                         sleep(2)
                         choice = input('Enter a choice: ')
                         sleep(2)
-                        continue
+                        
                         
                 elif int(choice_3) == 2:
                         sleep(0.5)
-                        print('Thank you for banking with us')
+                        print('Thank you for banking with us \n We would love to see you again \n BYE!!!! for now')
                         sleep(2)
                         exit()
 
@@ -411,7 +433,7 @@ while True:
 
         elif int(choice_4) == 2:
             sleep(0.5)
-            print('Thank you for banking with us')
+            print('Thank you for banking with us \n We would love to see you again \n BYE!!!! for now')
             sleep(2)
             exit()
             
@@ -423,7 +445,7 @@ while True:
         print("")
         if deposit == 0:
             sleep(0.5)
-            print('Thank you for banking with us')
+            print('Thank you for banking with us \n We would love to see you again \n BYE!!!! for now')
             sleep(2)
             exit()
         elif deposit <= 1000000:
@@ -443,7 +465,7 @@ while True:
     # Exit Program
     elif int(choice) == 4:
             sleep(0.5)
-            print('Thank you for banking with us')
+            print('Thank you for banking with us \n We would love to see you again \n BYE!!!! for now')
             sleep(2)
             exit()  
                  
